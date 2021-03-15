@@ -1,0 +1,9 @@
+{
+    // "rust-analyzer.cargo.features": [
+    //     "blocking"
+    // ],
+    "rust-analyzer.cargo.noDefaultFeatures": false,
+    "rust-analyzer.cargo.runBuildScripts": true,
+    "editor.formatOnSave": true,
+    // "rust-analyzer.checkOnSave.allFeatures": true
+}

@@ -1,0 +1,57 @@
+[package]
+name = "dagpirs"
+version = "0.1.0"
+authors = ["Arnav <arnav.jindal7@gmail.com>"]
+description = "A pure rust wrapper for dagpi, with image manipulation and data fetching."
+documentation= "https://docs.rs/dagpi"
+include = ["src/**/*", "LICENSE.md", "README.md", "CHANGELOG.md", "build.rs"]
+readme = "README.md"
+build="build.rs"
+homepage="https://dagpi.xyz"
+license="MIT"
+license-file="LICENSE.md"
+repository = "https://github.com/daggy1234/dagpi.rs"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+blocking = ["reqwest/blocking"]
+default = ["tokio", "tracing-futures"]
+serenity = ["typemap_rev"]
+
+[dependencies.serde]
+version = "1.0.124"
+features = ["derive"]
+
+[dependencies.reqwest]
+version = "0.11.0"
+features = ["json"]
+
+[dependencies.tokio]
+version = "1"
+features = ["rt", "sync", "time", "macros"]
+optional = true
+
+
+[dependencies.tracing]
+version = "0.1.22"
+
+[dependencies.tracing-futures]
+version = "0.2.4"
+optional = true
+
+[dependencies.typemap_rev]
+version = "0.1.4"
+optional = true
+
+[dependencies.serde_json]
+version="1.0.64"
+
+[dependencies.bytes]
+version = "1"
+features = ["serde"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

@@ -1,0 +1,6 @@
+target/**/*
+Cargo.lock
+dagpi/target/**/*
+*.png
+*.gif
+.DS_STORE
