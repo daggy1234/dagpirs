@@ -8,8 +8,6 @@ jobs:
     name: Publish and release
     needs: [test]
     runs-on: ubuntu-latest
-    env:
-      CRATES_KEY: ${{ secrets.CARGO_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -30,5 +28,7 @@ jobs:
         with:
           command: login
           args: ${{CRATES_KEY}}
+        env:
+          CRATES_KEY: ${{ secrets.CARGO_TOKEN }}
       - run: cd dagpirs
       - run: cargo publish
