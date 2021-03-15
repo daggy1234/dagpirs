@@ -29,6 +29,8 @@ jobs:
           args: $CRATES_KEY
         env:
           CRATES_KEY: ${{ secrets.CARGO_TOKEN }}
-      - run: cd dagpirs/dagpirs
-      - run: ls
-      - run: cargo publish
+      - run: |
+          cd dagpirs
+          ls
+          cargo publish
+      - run: echo "done"
