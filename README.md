@@ -1,10 +1,22 @@
 # Dagpi.rs
 
+![License](https://img.shields.io/github/license/Daggy1234/polaroid?color=red) ![Chat](https://img.shields.io/discord/491175207122370581?color=gray&logo=discord) ![crate](https://img.shields.io/crates/v/dagpirs?logo=rust) ![Rust Report](https://rust-reportcard.xuri.me/badge/github.com/daggy1234/dagpirs) ![Actions](https://img.shields.io/github/workflow/status/daggy1234/dagpirs/Continuous%20Integration?logo=github) ![Docs](https://img.shields.io/docsrs/dagpirs?logo=read-the-docs) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/34c8f1ea44dd48c78c19e2937afbcd77)](https://www.codacy.com/gh/Daggy1234/dagpirs/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Daggy1234/dagpirs&amp;utm_campaign=Badge_Grade)
+
+## Links
+
+---
+
+Crate: [link](https://crates.io/crates/dagpirs)
+
+Docs: [link](https://docs.rs/dagpirs)
+
 A pure rust wrapper for [dagpi](https://dapi.xyz).
 
 Please Note this was inspired by [Ksoft.rs](https://github.com/KSoft-Si/KSoft.rs). [License](https://github.com/KSoft-Si/KSoft.rs/blob/master/LICENSE)
 
 ## Async Useage
+
+---
 
 ### Cargo.toml
 
@@ -24,7 +36,7 @@ features = ["macros"]
 
 Uses a very basic Data Endpoint to fetch data from the api.
 
-```rs
+```rust
 
 use dagpi::Client;
 
@@ -43,7 +55,7 @@ async fn main() {
 
 Uses the image client ot process and save an image to file based on it;s format!
 
-```rs
+```rust
 use dagpi::Client;
 
 #[tokio::main]
@@ -64,7 +76,7 @@ async fn main() {
 
 #### Complex Image Request: Discord
 
-```rs
+```rust
 use dagpi::Client;
 #[tokio::main]
 async fn main() {
@@ -86,8 +98,9 @@ async fn main() {
 }
 ```
 
-
 ## Blocking Useage
+
+---
 
 Basic blocking usecase.
 
@@ -100,14 +113,13 @@ default-features=false
 features = ["blocking"]
 ```
 
-
 ### Basic Blocking Client
 
 #### Data Request Blocking
 
 Uses a very basic Data Endpoint to fetch data from the api.
 
-```rs
+```rust
 
 use dagpi::Client;
 
@@ -125,7 +137,7 @@ fn main() {
 
 Uses the image client ot process and save an image to file based on it;s format!
 
-```rs
+```rust
 use dagpi::Client;
 
 fn main() {
@@ -145,7 +157,7 @@ fn main() {
 
 #### Complex Image Request: Pride
 
-```rs
+```rust
 use dagpi::Client;
 fn main() {
     let client =
@@ -161,4 +173,6 @@ fn main() {
 }
 ```
 
-Docs for more examples
+Docs for more examples.
+
+Or the Examples folder in the repo.

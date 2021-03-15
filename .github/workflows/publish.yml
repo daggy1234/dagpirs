@@ -1,0 +1,34 @@
+name: Pubish
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  release:
+    name: Publish and release
+    needs: [test]
+    runs-on: ubuntu-latest
+    env:
+      CRATES_KEY: ${{ secrets.CARGO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body: |
+            new release
+          files: |
+            dagpirs/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions-rs/cargo@v1
+        with:
+          command: login
+          args: ${{CRATES_KEY}}
+      - run: cd dagpirs
+      - run: cargo publish

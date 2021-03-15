@@ -4,3 +4,4 @@ dagpi/target/**/*
 *.png
 *.gif
 .DS_STORE
+token.txt
