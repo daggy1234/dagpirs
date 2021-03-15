@@ -9,7 +9,6 @@ readme = "README.md"
 build="build.rs"
 homepage="https://dagpi.xyz"
 license="MIT"
-license-file="LICENSE.md"
 repository = "https://github.com/daggy1234/dagpi.rs"
 edition = "2018"
 
