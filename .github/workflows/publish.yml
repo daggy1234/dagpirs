@@ -27,7 +27,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: login
-          args: ${{CRATES_KEY}}
+          args: $CRATES_KEY
         env:
           CRATES_KEY: ${{ secrets.CARGO_TOKEN }}
       - run: cd dagpirs
