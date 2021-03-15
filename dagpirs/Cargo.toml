@@ -1,15 +1,15 @@
 [package]
 name = "dagpirs"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Arnav <arnav.jindal7@gmail.com>"]
 description = "A pure rust wrapper for dagpi, with image manipulation and data fetching."
-documentation= "https://docs.rs/dagpi"
+documentation= "https://docs.rs/dagpirs"
 include = ["src/**/*", "LICENSE.md", "README.md", "CHANGELOG.md", "build.rs"]
 readme = "README.md"
 build="build.rs"
 homepage="https://dagpi.xyz"
 license="MIT"
-repository = "https://github.com/daggy1234/dagpi.rs"
+repository = "https://github.com/daggy1234/dagpirs"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
