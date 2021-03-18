@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/github/license/Daggy1234/polaroid?color=red) ![Chat](https://img.shields.io/discord/491175207122370581?color=gray&logo=discord) ![crate](https://img.shields.io/crates/v/dagpirs?logo=rust) ![Rust Report](https://rust-reportcard.xuri.me/badge/github.com/daggy1234/dagpirs) ![Actions](https://img.shields.io/github/workflow/status/daggy1234/dagpirs/Continuous%20Integration?logo=github) ![Docs](https://img.shields.io/docsrs/dagpirs?logo=read-the-docs) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/34c8f1ea44dd48c78c19e2937afbcd77)](https://www.codacy.com/gh/Daggy1234/dagpirs/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Daggy1234/dagpirs&amp;utm_campaign=Badge_Grade)
 
-A pure rust wrapper for [dagpi](https://dapi.xyz).
+A pure rust wrapper for [dagpi](https://dapgi.xyz).
 
 ## Links
 

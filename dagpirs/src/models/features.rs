@@ -41,6 +41,14 @@ pub enum ImageManipulation {
     Communism,
     Rainbow,
     Magik,
+    Spin,
+    Comic,
+    Burn,
+    Freeze,
+    Earth,
+    PetPet,
+    Neon,
+    Sketch,
 }
 /// Image Manipulation that has text
 #[derive(Debug)]
