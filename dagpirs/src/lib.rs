@@ -43,7 +43,7 @@ use std::{
 use models::api::MissingParams;
 
 const ENDPOINT: &str = "https://api.dagpi.xyz";
-const VERSION: &str = "1.0.0";
+const VERSION: &str = "0.1.3";
 #[allow(dead_code)]
 const LICENSE: &str = "MIT";
 
