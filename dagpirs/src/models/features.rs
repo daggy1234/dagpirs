@@ -49,6 +49,10 @@ pub enum ImageManipulation {
     PetPet,
     Neon,
     Sketch,
+    Glitch,
+    Shake,
+    Bomb,
+    Bonk,
 }
 /// Image Manipulation that has text
 #[derive(Debug)]
@@ -78,6 +82,8 @@ pub enum Pride {
     Pan,
     Progress,
     Trans,
+    Ally,
+    Polysexual,
 }
 
 impl fmt::Display for ImageManipulation {
