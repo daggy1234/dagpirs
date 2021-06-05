@@ -235,4 +235,37 @@ impl Image {
             .query(&[("flag", flag.to_string().to_lowercase())]);
         make_request_image(req).await
     }
+
+    /// Sample Image Processing
+    /// This example processes a URL and saves a format aware Image
+    /// # Example
+    /// ```rust
+    /// use dagpirs::{Client, Bytes};
+    /// // Only here the std fs is used, in prod for async use the tokio::fs;
+    /// use std::fs;
+    /// use std::io::Write;
+    /// use tokio;
+    /// #[tokio::main]
+    /// async fn main() {
+    ///     let token = std::env::var("DAGPI_TOKEN").unwrap();
+    ///     let c = Client::new(&token).unwrap();
+    ///     if let Ok(i) = c.image.special_image("https://dagpi.xyz/dagpi.png".to_string()).await {
+    ///         match i {
+    ///             Ok(im) => {
+    ///                 let buff: Bytes = im.bytes;
+    ///                 let mut f = fs::File::create(format!("special.{}", im.format)).unwrap();
+    ///                 f.write_all(buff.to_vec().as_slice()).unwrap();
+    ///         },
+    ///             Err(e) => panic!("{}", e)    
+    ///         }
+    ///     }
+    ///}
+    pub async fn special_image(&self, url: String) -> HttpResult<ImageResponse, String> {
+        let req = self
+            .http
+            .clone()
+            .get(&image_endpoint("special".to_string()))
+            .query(&[("url", &url)]);
+        make_request_image(req).await
+    }
 }

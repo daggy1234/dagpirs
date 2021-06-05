@@ -31,7 +31,7 @@ pub struct BasicMon {
     pub weight: f32,
 }
 
-#[allow(non_snake_case, clippy::clippy::upper_case_acronyms)]
+#[allow(non_snake_case)]
 #[derive(Serialize, Deserialize)]
 pub struct WTP {
     #[allow(non_snake_case)]

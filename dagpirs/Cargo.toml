@@ -1,6 +1,6 @@
 [package]
 name = "dagpirs"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Arnav <arnav.jindal7@gmail.com>"]
 description = "A pure rust wrapper for dagpi, with image manipulation and data fetching."
 documentation= "https://docs.rs/dagpirs"

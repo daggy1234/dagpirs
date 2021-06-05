@@ -214,4 +214,13 @@ impl Image {
             .query(&[("flag", flag.to_string().to_lowercase())]);
         make_request_image(req)
     }
+
+    pub fn special_image(&self, url: String) -> HttpResult<ImageResponse, String> {
+        let req = self
+            .http
+            .clone()
+            .get(&image_endpoint("special".to_string()))
+            .query(&[("url", &url)]);
+        make_request_image(req)
+    }
 }
