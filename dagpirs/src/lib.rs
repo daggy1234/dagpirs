@@ -229,7 +229,7 @@ mod tests {
 
     #[tokio::test]
     async fn file_too_large() {
-        let token = std::env::var("DAGPI_TOKENA").unwrap();
+        let token = std::env::var("DAGPI_TOKEN").unwrap();
 
         let c = Client::new(&token).unwrap();
         let _o = match c
