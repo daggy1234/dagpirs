@@ -106,3 +106,15 @@ pub struct Logo {
     pub easy: bool,
     pub clue: Option<String>,
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct Typeracer {
+    pub sentence: String,
+    pub image: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct Captcha {
+    pub image: String,
+    pub answer: String,
+}

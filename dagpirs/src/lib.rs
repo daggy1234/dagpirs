@@ -178,6 +178,7 @@ impl Display for HttpError {
 #[cfg(test)]
 mod tests {
     use crate::models::{ImageManipulation, ImageManipulationText};
+    use crate::Client;
 
     use super::*;
     use tokio;
@@ -228,7 +229,7 @@ mod tests {
 
     #[tokio::test]
     async fn file_too_large() {
-        let token = std::env::var("DAGPI_TOKEN").unwrap();
+        let token = std::env::var("DAGPI_TOKENA").unwrap();
 
         let c = Client::new(&token).unwrap();
         let _o = match c
@@ -259,7 +260,6 @@ mod tests {
     #[test]
     fn test_blocking_headline() {
         let token = std::env::var("DAGPI_TOKEN").unwrap();
-
         let c = blocking::Client::new(&token).unwrap();
         if let Ok(_h) = c.data.headline().unwrap() {
             assert!(true)

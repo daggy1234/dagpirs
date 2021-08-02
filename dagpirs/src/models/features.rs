@@ -53,6 +53,14 @@ pub enum ImageManipulation {
     Shake,
     Bomb,
     Bonk,
+    Lego,
+    Mirror,
+    Flip,
+    Expand,
+    Shatter,
+    Ground,
+    Dissolve,
+    Cube,
 }
 /// Image Manipulation that has text
 #[derive(Debug)]

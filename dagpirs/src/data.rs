@@ -1,4 +1,4 @@
-use crate::{models::data::*, HttpError, HttpResult, MsgResp, ENDPOINT};
+use crate::{blocking::data, models::data::*, HttpError, HttpResult, MsgResp, ENDPOINT};
 use reqwest::{Client, RequestBuilder};
 use serde::de::DeserializeOwned;
 use std::sync::Arc;
@@ -140,5 +140,17 @@ impl Data {
     pub async fn yomama(&self) -> HttpResult<YomamaJoke, String> {
         let req = self.http.clone().get(&data_endpoint("yomama"));
         make_request::<YomamaJoke>(req).await
+    }
+
+    /// A captcha. Contains captcha url with soln.
+    pub async fn captcha(&self) -> HttpResult<Captcha, String> {
+        let req = self.http.clone().get(&data_endpoint("captcha"));
+        make_request::<Captcha>(req).await
+    }
+
+    /// A typrecaer game sentence. Sentence image with text.
+    pub async fn typeracer(&self) -> HttpResult<Typeracer, String> {
+        let req = self.http.clone().get(&data_endpoint("typeracer"));
+        make_request::<Typeracer>(req).await
     }
 }

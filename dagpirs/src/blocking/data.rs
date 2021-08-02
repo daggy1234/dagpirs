@@ -97,4 +97,16 @@ impl Data {
         let req = self.http.clone().get(&data_endpoint("yomama"));
         make_request::<YomamaJoke>(req)
     }
+
+    /// A captcha. Contains captcha url with soln.
+    pub fn captcha(&self) -> HttpResult<Captcha, String> {
+        let req = self.http.clone().get(&data_endpoint("captcha"));
+        make_request::<Captcha>(req)
+    }
+
+    /// A typrecaer game sentence. Sentence image with text.
+    pub fn typeracer(&self) -> HttpResult<Typeracer, String> {
+        let req = self.http.clone().get(&data_endpoint("typeracer"));
+        make_request::<Typeracer>(req)
+    }
 }
