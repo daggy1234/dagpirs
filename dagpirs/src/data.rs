@@ -1,4 +1,4 @@
-use crate::{blocking::data, models::data::*, HttpError, HttpResult, MsgResp, ENDPOINT};
+use crate::{models::data::*, HttpError, HttpResult, MsgResp, ENDPOINT};
 use reqwest::{Client, RequestBuilder};
 use serde::de::DeserializeOwned;
 use std::sync::Arc;
