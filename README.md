@@ -46,7 +46,7 @@ use dagpi::Client;
 async fn main() {
     let client =
         Client::new("TOKEN").unwrap();
-    match client.data.fact().await.unwrap() {
+    match client.data.fact().await {
         Ok(f) => println!("{}", f.fact),
         Err(e) => println!("{:?}", e),
     };
@@ -65,7 +65,7 @@ async fn main() {
 
     let client =
         Client::new("TOKEN").unwrap();
-    match client.image.image_proess("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::ImageManipulation::Wanted).await.unwrap() {
+    match client.image.image_process("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::ImageManipulation::Wanted).await {
         Ok(v) => {
             let buff: Bytes = v.bytes;
             let mut f = fs::File::create(format!("memes.{}", v.format)).unwrap();
@@ -84,12 +84,12 @@ use dagpi::Client;
 async fn main() {
     let client =
         Client::new("").unwrap();
-    match client.data.fact().await.unwrap() {
+    match client.data.fact().await {
         Ok(f) => println!("{}", f.fact),
         Err(e) => println!("{:?}", e),
     };
 
-    match client.image.yt("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), "daggy", "Tweeting using dagpi.xyz is so much fun!. Goes great with dagpi.rs", false).await.unwrap() {
+    match client.image.yt("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), "daggy", "Tweeting using dagpi.xyz is so much fun!. Goes great with dagpi.rs", false).await {
         Ok(v) => {
             let buff: Bytes = v.bytes;
             let mut f = fs::File::create(format!("discord.{}", v.format)).unwrap();
@@ -128,7 +128,7 @@ use dagpi::Client;
 fn main() {
     let client =
         Client::new("TOKEN").unwrap();
-    match client.data.roast().unwrap() {
+    match client.data.roast() {
         Ok(f) => println!("{}", f.roast),
         Err(e) => println!("{:?}", e),
     };
@@ -146,7 +146,7 @@ fn main() {
 
     let client =
         Client::new("TOKEN").unwrap();
-    match client.image.image_proess("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::ImageManipulation::Wasted).unwrap() {
+    match client.image.image_process("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::ImageManipulation::Wasted) {
         Ok(v) => {
             let buff: Bytes = v.bytes;
             let mut f = fs::File::create(format!("memes.{}", v.format)).unwrap();
@@ -164,7 +164,7 @@ use dagpi::Client;
 fn main() {
     let client =
         Client::new("").unwrap();
-    match client.image.pride("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::Pride::Bisexual).unwrap() {
+    match client.image.pride("https://cdn.discordapp.com/avatars/716323270982631476/fa9fed1ed0d51eb4a15b654f3ae08215.png".to_string(), dagpi::models::Pride::Bisexual) {
         Ok(v) => {
             let buff: Bytes = v.bytes;
             let mut f = fs::File::create(format!("discord.{}", v.format)).unwrap();
