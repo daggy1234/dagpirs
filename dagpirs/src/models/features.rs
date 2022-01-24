@@ -61,6 +61,11 @@ pub enum ImageManipulation {
     Ground,
     Dissolve,
     Cube,
+    Elmo,
+    Tv,
+    GlitchStatic,
+    Album,
+    Rain,
 }
 /// Image Manipulation that has text
 #[derive(Debug)]

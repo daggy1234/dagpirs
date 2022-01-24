@@ -185,6 +185,7 @@ mod tests {
 
     #[test]
     #[should_panic]
+
     fn valid_token() {
         Client::new("memes").unwrap();
     }
@@ -273,7 +274,7 @@ mod tests {
         let c = blocking::Client::new(&token).unwrap();
         if let Ok(_h) = c.image.image_process_text(
             "https://cdn.discordapp.com/avatars/143090142360371200/a_70444022ea3e5d73dd00d59c5578b07e.png".to_string(),
-            "Memes".to_string(),
+                "Memes".to_string(),
             ImageManipulationText::Captcha,
         ) {
             assert!(true)
